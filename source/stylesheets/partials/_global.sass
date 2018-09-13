@@ -1,0 +1,68 @@
+*
+  box-sizing: border-box
+
+html
+  font-size: 90%
+  +media-breakpoint-up($bp-s)
+    font-size: 100%
+
+body
+  color: $c-text-base
+  font-family: $font-sans
+  line-height: 1.7
+  min-width: 320px
+
+h1, h2, h3
+  font-family: $font-serif
+  line-height: 1.4
+
+a
+  text-decoration: none
+
+.page-wrap
+  max-width: $site-max-width
+  margin: 0 auto
+  padding: 0 $site-padding-mobile
+  position: relative
+
+  +media-breakpoint-up($bp-s)
+    padding: 0 $site-padding-tablet
+
+  +media-breakpoint-up($bp-m)
+    padding: 0 $site-padding-desktop
+
+.list
+  &--inline
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      display: inline-block
+  &--unstyled
+    margin: 0
+    padding: 0
+    list-style: none
+
+.mb
+  margin-bottom: 30px
+  +media-breakpoint-up($bp-s)
+    margin-bottom: 50px
+  +media-breakpoint-up($bp-m)
+    margin-bottom: 80px
+
+.hidden--lg
+  +media-breakpoint-up($bp-m)
+    display: none !important
+
+.hidden--sm
+  display: none
+  +media-breakpoint-up($bp-m)
+    display: inline-block
+
+.clearfix::after
+  content: ''
+  clear: both
+  display: table
+
+.respond
+  @extend %respond

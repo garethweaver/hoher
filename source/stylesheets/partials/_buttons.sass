@@ -1,0 +1,60 @@
+.btn
+  font-family: $font-serif
+  text-transform: uppercase
+  display: inline-block
+  padding: 10px 50px 10px 25px
+  position: relative
+
+  &:after,
+  &:before
+    content: ''
+    +circle (6px)
+    background: $c-brand
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+  &:before,
+    right: 30px
+  &:after,
+    right: 20px
+
+  &--light
+    color: white
+    border: 2px solid #fff
+    background: rgba(black, 0.4)
+    &:hover
+      background: rgba(white, 0.2)
+
+  &--dark
+    color: $c-text-base
+    border: 2px solid $c-text-base
+    &:hover
+      background: rgba(#1BBF03, 0.1)
+
+  &--amazon
+    max-width: 110px
+
+
+.sticker
+  +circle(60px)
+  background: $c-alert
+  font-family: $font-serif
+  color: #fff
+  line-height: 60px
+  text-align: center
+  display: block
+  text-transform: uppercase
+
+.product__choices__color
+  +square(35px)
+  background: black
+  display: block
+  position: relative
+
+  &--secondary
+    position: absolute
+    bottom: 0
+    right: 0
+    +triangle(35px)
+

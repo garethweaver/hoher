@@ -1,0 +1,117 @@
+.main
+
+  .v-padd
+    padding: 80px 0 50px
+    +media-breakpoint-up($bp-s)
+      padding: 100px 0 80px
+    +media-breakpoint-up($bp-m)
+      padding: 120px 0
+
+
+  &__wrap
+    padding: 0 0 50px
+    border-top: 1px solid $c-gray-hr
+    position: relative
+
+    +media-breakpoint-up($bp-m)
+      padding: 0
+      border-top: none
+
+      &:after
+        content: ''
+        position: absolute
+        top: 80px
+        left: 0
+        right: 0
+        height: 1px
+        z-index: 1
+        background: $c-gray-hr
+
+  &__c-one
+    +media-breakpoint-up($bp-m)
+      max-width: 390px
+
+  &__c-two
+    padding: 50px 0
+    h2
+      margin-top: 0
+    .btn
+      margin-top: 20px
+
+  &__logo-wrapper
+    text-align: center
+    padding-top: 60px
+    position: relative
+    top: -30px
+
+    +media-breakpoint-up($bp-m)
+      padding-top: 0
+      position: absolute
+      top: 40px
+      left: 0
+      bottom: 0
+      right: 55%
+      display: flex
+      align-items: center
+      justify-content: center
+
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      height: 50%
+      width: 50%
+      border-right: 1px solid $c-gray-hr
+
+  &__logo
+    position: relative
+    z-index: 2
+    +square(100px)
+
+    +media-breakpoint-up(850px)
+      +square(140px)
+
+    +media-breakpoint-up($bp-l)
+      +square(200px)
+
+  &__i-one,
+  &__i-two
+    @extend %respond
+
+  +media-breakpoint-up($bp-m)
+    &__c-two
+      padding: 0
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 56.5%
+      display: flex
+      align-items: center
+      justify-content: center
+
+      > div
+        padding: 10px 0
+        max-width: 70%
+        background: white
+
+    &__i-one
+      float: right
+
+    &__i-one
+      max-width: 55%
+
+    &__i-two
+      max-width: 75%
+      transform: translateY(-50px)
+
+    &__i-two-wrapper
+      width: 75%
+      border-right: 1px solid $c-gray-hr
+      padding-bottom: 30px
+
+  .row
+    @extend .clearfix
+    z-index: 2
+    position: relative

@@ -1,0 +1,22 @@
+.main
+  .page-wrap
+    .v-padd
+      .main__c-one
+        %h2= data.site.sections[0].title
+        %p= data.site.sections[0].content
+  .main__wrap
+    .page-wrap
+      .row
+        .main__logo-wrapper
+          %img.main__logo{ src: '/images/logos/hoher-logo.svg', alt: '' }
+        %img.main__i-one{ src: '/images/main/hoher-bag-open.jpg', alt: '' }
+      .row
+        .main__c-two
+          %div
+            %h2= data.site.sections[1].title
+            %p= data.site.sections[1].content
+            %a{ href: data.site.shop_link, target: '_blank' }
+              %span.btn.btn--dark.hidden--lg.scroll-anchor{ href: '#products' }
+                Shop Now
+        .main__i-two-wrapper
+          %img.main__i-two{ src: '/images/main/rucksack-in-the-woods.jpg', alt: '' }

@@ -1,0 +1,32 @@
+#site-nav
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 3
+
+.site-nav
+  &__logo
+    float: left
+    display: block
+    width: 100px
+
+    +media-breakpoint-up($bp-s)
+      width: 120px
+
+  &__links
+
+    float: right
+    margin: 10px -8px 0 0
+    +media-breakpoint-up($bp-s)
+      margin: 15px -8px 0 0
+
+    a
+      box-sizing: content-box
+      display: inline-block
+      padding: 5px 8px
+      +square(25px)
+
+      +media-breakpoint-up($bp-s)
+        +square(35px)
+        +grow(1.1)

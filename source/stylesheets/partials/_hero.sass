@@ -1,0 +1,88 @@
+.hero
+  background: url('/images/main/hero-sm.jpg') no-repeat center bottom #21221f
+  background-size: cover
+  color: white
+  padding: 100px 0 150px
+
+  +media-breakpoint-up($bp-s)
+    background: url('/images/main/hero.jpg') no-repeat center bottom #21221f
+    background-size: cover
+    padding: 170px 0 200px
+
+  +media-breakpoint-up($bp-m)
+    padding: 170px 0 140px
+
+  &__content
+    position: relative
+    z-index: 2
+    max-width: 500px
+
+  h1
+    margin: 0 0 20px
+    +media-breakpoint-up($bp-l)
+      font-size: 40px
+
+  p
+    +media-breakpoint-up($bp-m)
+      font-size: 18px
+
+  &__cta
+    margin-top: 30px
+
+    li + li
+      margin: 10px 0 0
+
+    +media-breakpoint-up($bp-m)
+      display: flex
+      li + li
+        margin: 0 0 0 15px
+
+    img
+      width: 156px
+      display: inline-block
+      +media-breakpoint-up($bp-s)
+        width: 165px
+
+  &__image
+    position: absolute
+    z-index: 1
+    bottom: -220px
+    right: 0
+    overflow: hidden
+    width: 280px
+
+    img
+      width: 280px
+      margin-left: 30px
+
+    +media-breakpoint-up($bp-s)
+      width: 360px
+      bottom: -300px
+      img
+        width: 360px
+
+    +media-breakpoint-up($bp-m)
+      margin-left: 20px
+      width: 400px
+      bottom: -250px
+      img
+        width: 400px
+
+    +media-breakpoint-up(850px)
+      width: 500px
+      bottom: -270px
+      img
+        width: 500px
+
+    +media-breakpoint-up($bp-l)
+      bottom: -290px
+      right: 0
+      width: 600px
+      img
+        width: 620px
+
+    +media-breakpoint-up(1100px)
+      width: 620px
+      img
+        width: 620px
+        margin-left: 0

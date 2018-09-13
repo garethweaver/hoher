@@ -1,0 +1,29 @@
+%footer.site-footer
+  .page-wrap
+    %nav
+      %ul.site-footer__links.list--unstyled
+        %li
+          %a{ href: data.site.shop_link, target: '_blank', rel: 'noopener noreferrer' }
+            %span.site-footer__links__inner
+              %img.respond{ src: '/images/icons/amazon.svg', alt: '' }
+              %span
+                Order on Amazon
+        %li
+          %a{ href: data.site.instagram, target: '_blank', rel: 'noopener noreferrer' }
+            %span.site-footer__links__inner
+              %img.respond{ src: '/images/icons/instagram.svg', alt: '' }
+              %span
+                a.better.journey
+        %li
+          %a{ href: 'http://www.garethweaver.com', target: '_blank' }
+            %span.site-footer__links__inner
+              %img.respond{ src: '/images/icons/world.svg', alt: '' }
+              %span
+                Website - Gareth Weaver
+        %li
+          %span.site-footer__links__inner
+            %img.respond{ src: '/images/icons/copyright.svg', alt: '' }
+            %span
+              Höher bags
+              :javascript
+                document.write(new Date().getFullYear())

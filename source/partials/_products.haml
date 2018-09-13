@@ -1,0 +1,38 @@
+#products
+  .page-wrap
+    .flex-two-col
+      - data.products.each do |product|
+        %section.product
+          .product__showcase
+            - if product.sticker
+              %span.sticker
+                Sale
+            %a{ href: product.url, target: '_blank', rel: 'noopener noreferrer' }
+              %img.product__image{ src: "/images/products/#{product.image}", alt: product.title }
+              .btn-bar
+                %span.btn.btn--dark
+                  = precede 'From &pound;' do
+                    = product.price.now
+          .product__info
+            %h2
+              = product.title
+            .product__price
+              %span.product__price__was
+                = precede 'was &pound;' do
+                  = product.price.was
+              %span.product__price__now
+                = precede 'from &pound;' do
+                  = product.price.now
+            %ul.product__spec
+              - product.details.each do |detail|
+                %li= detail
+            %aside.product__choices
+              %ul.list--inline
+                - product.choices.each do |choice|
+                  %li
+                    %a{ href: product.url, target: '_blank', rel: 'noopener noreferrer' }
+                      %span.product__choices__color{ style: "background: #{choice[0]};"  }
+                        %span.product__choices__color--secondary{ style: "border-color: transparent transparent #{choice[1]} transparent;" }
+                %li
+                  %a{ href: product.url, target: '_blank', rel: 'noopener noreferrer' }
+                    %img.btn--amazon{ src: '/images/icons/amazon-btn.svg' }

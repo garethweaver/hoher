@@ -1,0 +1,15 @@
+%header.hero
+  .page-wrap
+    .hero__content
+      %h1= data.site.hero_title
+      %p= data.site.hero_content
+      %ul.hero__cta.list--unstyled
+        %li
+          %a.btn.btn--light.scroll-anchor{ href: '#products' }
+            Shop Now
+        %li.hidden--sm
+          %a{ href: data.site.shop_link, target: '_blank', rel: 'noopener noreferrer' }
+            %img{ src: '/images/icons/amazon-btn.svg' }
+
+    .hero__image
+      %img{ src: '/images/main/hero-bags-sm.png',srcset:'/images/main/hero-bags-sm.png 400w, /images/main/hero-bags-md.png 800w, /images/main/hero-bags-lg.png 1000w', sizes: '40vw' }

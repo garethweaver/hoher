@@ -1,0 +1,25 @@
+!!!5
+%html
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+    %title= current_page.data.title || 'Höher Bags'
+    %meta{ name: 'website', property: 'og:type' }
+    %meta{ content: '', property: 'og:title' }
+    %meta{ content: '', property: 'og:description' }
+    %meta{ content: 'http://www.gohoher.com/', property: 'og:url' }
+    %meta{ content: 'http://www.gohoher/images/main/hoher-og.jpg', property:'og:image' }
+    = favicon_tag '/images/icons/favicon.png'
+    = stylesheet_link_tag 'site'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700'
+    - if @build
+      = javascript_include_tag 'https://www.googletagmanager.com/gtag/js?id=UA-22525855-13', { async: '' }
+      :javascript
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-22525855-13');
+  %body
+    = yield
+    = javascript_include_tag 'site'
