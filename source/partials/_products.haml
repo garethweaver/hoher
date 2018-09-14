@@ -23,6 +23,12 @@
               %span.product__price__now
                 = precede 'from &pound;' do
                   = product.price.now
+            %ul.product__rating.list--inline
+              - 4.times do
+                %li
+                  %img{ src: '/images/icons/star-solid.svg', alt: 'Full star icon' }
+              %li
+                %img{ src: '/images/icons/star-half-solid.svg', alt: 'Half star icon' }
             %ul.product__spec
               - product.details.each do |detail|
                 %li= detail
