@@ -4,15 +4,18 @@
     %meta{ charset: 'utf-8' }
     %meta{ 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
+
     %title= current_page.data.title || 'Höher Bags'
     %meta{ name: 'website', property: 'og:type' }
     %meta{ content: '', property: 'og:title' }
     %meta{ content: '', property: 'og:description' }
     %meta{ content: 'http://www.gohoher.com/', property: 'og:url' }
     %meta{ content: 'http://www.gohoher/images/main/hoher-og.jpg', property:'og:image' }
+
     = favicon_tag '/images/icons/favicon.png'
     = stylesheet_link_tag 'site'
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700'
+
     - if build?
       = javascript_include_tag 'https://www.googletagmanager.com/gtag/js?id=UA-22525855-13', { async: '' }
       :javascript
@@ -20,6 +23,22 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-22525855-13');
+      :javascript
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '326011611241655');
+        fbq('track', 'PageView');
+
   %body
     = yield
     = javascript_include_tag 'site'
+
+    - if build?
+      %noscript
+        %img{ height: '1', width: '1', src: 'https://www.facebook.com/tr?id=326011611241655&ev=PageView &noscript=1' }
