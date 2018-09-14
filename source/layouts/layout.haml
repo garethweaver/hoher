@@ -5,12 +5,12 @@
     %meta{ 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
 
-    %title= current_page.data.title || 'Höher Bags'
+    %title= data.site.title
     %meta{ name: 'website', property: 'og:type' }
-    %meta{ content: '', property: 'og:title' }
-    %meta{ content: '', property: 'og:description' }
+    %meta{ content: data.site.meta_title, property: 'og:title' }
+    %meta{ content: data.site.meta_desc, property: 'og:description' }
     %meta{ content: 'http://www.gohoher.com/', property: 'og:url' }
-    %meta{ content: 'http://www.gohoher/images/main/hoher-og.jpg', property:'og:image' }
+    %meta{ content: 'http://www.gohoher.com/images/main/hoher-og.jpg', property:'og:image' }
 
     = favicon_tag '/images/icons/favicon.png'
     = stylesheet_link_tag 'site'
