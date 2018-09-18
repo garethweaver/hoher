@@ -1,4 +1,4 @@
-- title: Backpack
+- title: Richmond Backpack
   image: backpack-1.jpg
   url: http://bit.ly/PurchaseHoherBackpack
   sticker: true
@@ -30,7 +30,8 @@
     - Available in 4 colours
     - 28cm x 22cm x 12cm
   choices:
-    - ['#4f4a49', '#000000']
-    - ['#4f4a49', '#e3a600']
-    - ['#6c5843', '#e3a600']
-    - ['#b48d64', '#baa56b']
+    - ['#353739', '#000000']
+    - ['#353739', '#e3a600']
+    - ['#6B3E20', '#e3a600']
+    - ['#BBA263', '#e3a600']
+    - ['#AE5C1D', '#e3a600']
