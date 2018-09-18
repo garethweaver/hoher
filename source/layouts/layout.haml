@@ -6,7 +6,8 @@
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
 
     %title= data.site.title
-    %meta{ name: 'website', property: 'og:type' }
+    %meta{ content: data.site.meta_desc, name: 'description' }
+    %meta{ content: 'website', property: 'og:type' }
     %meta{ content: data.site.meta_title, property: 'og:title' }
     %meta{ content: data.site.meta_desc, property: 'og:description' }
     %meta{ content: 'http://www.gohoher.com/', property: 'og:url' }
