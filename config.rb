@@ -42,4 +42,13 @@ page '/*.txt', layout: false
 configure :build do
   activate :minify_css
   activate :minify_javascript
+  activate :asset_hash
+end
+
+activate :deploy do |deploy|
+  deploy.deploy_method   = :ftp
+  deploy.host            = @app.data.ftp.host
+  deploy.path            = @app.data.ftp.path
+  deploy.user            = @app.data.ftp.user
+  deploy.password        = @app.data.ftp.password
 end
