@@ -17,11 +17,11 @@
 
 - title: Washbag
   image: washbag-1.jpg
-  url: http://bit.ly/website-buy-now
+  url: https://www.amazon.co.uk/gp/aw/d/B07CZPFN4H
   sticker: true
   price:
     was: 27.99
-    now: 19.99
+    now: 23.99
   details:
     - Intelligent design
     - Multiple compartments
